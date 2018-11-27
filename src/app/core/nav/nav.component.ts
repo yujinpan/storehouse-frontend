@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -6,14 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.less']
 })
 export class NavComponent implements OnInit {
-  menuItems = [
-    'Heroes',
-    'Villains',
-    'Other'
-  ]
+  @Output() menuStateChange = new EventEmitter<boolean>();
+
+  private logoActive: boolean = true;
+
+  private menus = [
+    { name: '工具', url: '.' }
+  ];
 
   ngOnInit() {
 
+  }
+
+  private toggleMenu() {
+    this.logoActive = !this.logoActive;
+    this.menuStateChange.emit(this.logoActive);
   }
 
 }

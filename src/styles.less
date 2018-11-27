@@ -1,4 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+// 常用 flex 布局
+.flex() {
+    display: flex;
+}
+
+.flex-center-vertical {
+    .flex();
+    align-items: center;
+}
+
+.flex-center-horizontal {
+    .flex();
+    justify-content: center;
+}
+
+.flex-center {
+    .flex-center-vertical;
+    .flex-center-horizontal;
+}
+
+.flex-spacer {
+    flex-grow: 1;
+}
+
+// 响应式，加上 html 前缀覆盖作用
+html {
+    .normal-inline-show {
+        display: inline-block;
+    }
+    .small-block-show,
+    .small-inline-show {
+        display: none;
+    }
+    .normal-block-show {
+        display: block;
+    }
+    @media (max-width: 720px) {
+        .normal-block-show,
+        .normal-inline-show {
+            display: none;
+        }
+        .small-inline-show {
+            display: inline-block;
+        }
+        .small-block-show {
+            display: block;
+        }
+    }
+}

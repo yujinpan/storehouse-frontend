@@ -1,12 +1,17 @@
-<header>
-  <div>
-    <h4>Store House</h4>
-  </div>
-  <nav>
-    <ul>
-      <li *ngFor="let item of menuItems">
-        {{item}}
-      </li>
-    </ul>
-  </nav>
-</header>
+<nav class="navbar-header flex-center-vertical mat-elevation-z6">
+  <!-- reactive-->
+  <!-- pc -->
+  <a class="normal-inline-show" mat-mini-fab routerLink=".">
+    <app-logo></app-logo>
+  </a>
+  <!-- wap -->
+  <button (click)="toggleMenu()" class="small-inline-show" mat-mini-fab>
+    <app-logo [logoActive]="logoActive"></app-logo>
+  </button>
+  <!-- end reactive -->
+  <a *ngFor="let menu of menus" class="navbar-menus" mat-button [routerLink]="menu.url">{{menu.name}}</a>
+  <div class="flex-spacer"></div>
+  <a mat-icon-button target="_blank" href="https://github.com/yujinpan">
+    <img class="navbar-icon-github" src="/assets/images/icon-github.svg" />
+  </a>
+</nav>
