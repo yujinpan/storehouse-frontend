@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-text-filter',
-  templateUrl: `<input type="text" id="text-filter" [(ngModel)]="filter" (keyup)="filterChanged($event)" />`
+  template: `<input type="text" id="text-filter" [(ngModel)]="filter" (keyup)="filterChanged($event)" />`
 })
 export class TextFilterComponent {
   @Output() changed: EventEmitter<string>;
