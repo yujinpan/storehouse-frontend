@@ -5,6 +5,7 @@ import { NavComponent } from './nav/nav.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { SpinnerService } from './spinner/spinner.service';
 import { throwIfAlreadyLoaded } from "./module-import-guard";
+import { LoggerService } from './logger.service';
 
 @NgModule({
   declarations: [NavComponent, SpinnerComponent],
@@ -14,7 +15,7 @@ import { throwIfAlreadyLoaded } from "./module-import-guard";
   exports: [
     NavComponent, SpinnerComponent
   ],
-  providers: [SpinnerService]
+  providers: [SpinnerService, LoggerService]
 })
 export class CoreModule {
   /**
