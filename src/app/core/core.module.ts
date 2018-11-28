@@ -1,5 +1,4 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { MatButtonModule } from "@angular/material";
 import { RouterModule } from "@angular/router";
 import { SharedModule } from '../shared/shared.module';
 
@@ -9,18 +8,19 @@ import { SpinnerService } from './spinner/spinner.service';
 import { throwIfAlreadyLoaded } from "./module-import-guard";
 import { LoggerService } from './logger.service';
 import { LogoComponent } from './logo/logo.component';
+import { SlideNavComponent } from './slide-nav/slide-nav.component';
+import { MenuService } from './menu.service';
 
 @NgModule({
-  declarations: [NavComponent, SpinnerComponent, LogoComponent],
+  declarations: [NavComponent, SpinnerComponent, LogoComponent, SlideNavComponent],
   imports: [
-    MatButtonModule,
     SharedModule,
     RouterModule
   ],
   exports: [
-    NavComponent, SpinnerComponent
+    NavComponent, SpinnerComponent, SlideNavComponent
   ],
-  providers: [SpinnerService, LoggerService]
+  providers: [SpinnerService, LoggerService, MenuService]
 })
 export class CoreModule {
   /**

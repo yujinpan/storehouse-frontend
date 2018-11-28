@@ -6,10 +6,20 @@ import { InitCapsPipe } from './init-caps.pipe';
 import { TextFilterComponent } from './text-filter.component';
 import { TextFilterService } from './text-filter.service';
 
+import { MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from "@angular/material";
+
+const MatModules = [
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule
+]
+
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    ...MatModules
   ],
   declarations: [
     InitCapsPipe,
@@ -22,7 +32,8 @@ import { TextFilterService } from './text-filter.service';
     CommonModule,
     FormsModule,
     TextFilterComponent,
-    InitCapsPipe
+    InitCapsPipe,
+    ...MatModules
   ]
 })
 export class SharedModule { }
