@@ -1,7 +1,10 @@
-<mat-drawer-container hasBackdrop="false">
-    <mat-drawer #drawer mode="push">I'm a drawer</mat-drawer>
-    <mat-drawer-content>
-        <app-nav (menuStateChange)="drawer.toggle()"></app-nav>
+<app-nav (menuStateChange)="sidenav.toggle()"></app-nav>
+<mat-sidenav-container hasBackdrop="false">
+    <mat-sidenav #sidenav mode="push">
+        <app-slide-nav></app-slide-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        main
         <router-outlet></router-outlet>
-    </mat-drawer-content>
-</mat-drawer-container>
+    </mat-sidenav-content>
+</mat-sidenav-container>
