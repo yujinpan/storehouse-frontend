@@ -1,7 +1,7 @@
 <nav class="navbar-header flex-center-vertical mat-elevation-z6">
   <!-- reactive-->
   <!-- pc -->
-  <a class="normal-inline-show" mat-mini-fab routerLink=".">
+  <a class="navbar-logo normal-inline-show" mat-mini-fab routerLink=".">
     <app-logo></app-logo>
   </a>
   <!-- wap -->
@@ -9,9 +9,16 @@
     <app-logo [logoActive]="logoActive"></app-logo>
   </button>
   <!-- end reactive -->
-  <a *ngFor="let menu of menus" class="navbar-menus" mat-button [routerLink]="menu.url">{{menu.name}}</a>
+  <!-- menus -->
+  <span class="normal-inline-show">
+    <a *ngFor="let menu of menus" mat-button [routerLink]="menu.url">
+      <span>{{menu.name}}</span>
+    </a>
+  </span>
+  <!-- end menus -->
   <div class="flex-spacer"></div>
-  <a mat-icon-button target="_blank" href="https://github.com/yujinpan">
+  <a mat-button target="_blank" href="https://github.com/yujinpan">
     <img class="navbar-icon-github" src="/assets/images/icon-github.svg" />
+    <span>GitHub</span>
   </a>
 </nav>
