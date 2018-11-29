@@ -8,7 +8,7 @@ import { MenuService } from '../menu.service';
   styleUrls: ['./slide-nav.component.less']
 })
 export class SlideNavComponent implements OnInit {
-  private menus;
+  menus;
 
   constructor(menuService: MenuService) {
     this.menus = menuService.getMenus();

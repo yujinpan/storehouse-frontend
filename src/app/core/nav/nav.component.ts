@@ -10,8 +10,8 @@ import { MenuService } from "../menu.service";
 export class NavComponent implements OnInit {
   @Output() menuStateChange = new EventEmitter<boolean>();
 
-  private menus;
-  private logoActive: boolean = true;
+  logoActive: boolean = true;
+  menus;
 
   constructor(menuService: MenuService) {
     this.menus = menuService.getMenus();
@@ -20,7 +20,7 @@ export class NavComponent implements OnInit {
   ngOnInit() {
   }
 
-  private toggleMenu() {
+  toggleMenu() {
     this.logoActive = !this.logoActive;
     this.menuStateChange.emit(this.logoActive);
   }
