@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
-import { MenuService } from "../menu.service";
+import { MenuService } from '../menu.service';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +10,7 @@ import { MenuService } from "../menu.service";
 export class NavComponent implements OnInit {
   @Output() menuStateChange = new EventEmitter<boolean>();
 
-  logoActive: boolean = true;
+  logoActive = true;
   menus;
 
   constructor(menuService: MenuService) {
