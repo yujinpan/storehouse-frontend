@@ -6,5 +6,5 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./logo.component.less']
 })
 export class LogoComponent {
-  @Input() logoActive: boolean = false;
+  @Input() logoActive = false;
 }

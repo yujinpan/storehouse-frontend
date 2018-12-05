@@ -9,7 +9,7 @@ export class AppService {
     pv: '/pv/set'
   };
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getPv() {
     return this.http.get(this.API.pv);

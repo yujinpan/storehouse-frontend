@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 
-import { menu } from "./menu";
-import { menus } from "./menus.data";
+import { Menu } from './menu';
+import { menus } from './menus.data';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
-  private menus: menu[] = menus;
+  private menus: Menu[] = menus;
 
-  constructor() { }
+  constructor() {}
 
   getMenus() {
     return this.menus;

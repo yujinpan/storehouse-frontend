@@ -14,7 +14,5 @@ export class SlideNavComponent implements OnInit {
     this.menus = menuService.getMenus();
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

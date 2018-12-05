@@ -16,14 +16,16 @@ export class AppComponent implements OnInit {
   pv = 0;
   title = 'storehouse';
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService) {}
 
   ngOnInit() {
-    this.appService.getPv()
-      .subscribe((data: Pv) => {
+    this.appService.getPv().subscribe(
+      (data: Pv) => {
         this.pv = data.total;
-      }, error => {
+      },
+      error => {
         console.log(error);
-      });
+      }
+    );
   }
 }

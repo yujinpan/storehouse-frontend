@@ -1,5 +1,5 @@
 <nav class="navbar-header flex-center-vertical mat-elevation-z6">
-  <!-- reactive-->
+  <!-- reactive -->
   <!-- pc -->
   <a class="navbar-logo normal-inline-show" mat-mini-fab routerLink=".">
     <app-logo></app-logo>
@@ -12,7 +12,7 @@
   <!-- menus -->
   <span class="normal-inline-show">
     <a *ngFor="let menu of menus" mat-button [routerLink]="menu.url">
-      <span>{{menu.name}}</span>
+      <span>{{ menu.name }}</span>
     </a>
   </span>
   <!-- end menus -->

@@ -1,11 +1,11 @@
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 ul,
@@ -19,71 +19,71 @@ h6,
 input,
 button,
 textarea {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 // app-root
 app-root {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 56px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 // 常用 flex 布局
 .flex() {
-    display: flex;
+  display: flex;
 }
 
 .flex-center-vertical {
-    .flex();
-    align-items: center;
+  .flex();
+  align-items: center;
 }
 
 .flex-center-horizontal {
-    .flex();
-    justify-content: center;
+  .flex();
+  justify-content: center;
 }
 
 .flex-center {
-    .flex-center-vertical;
-    .flex-center-horizontal;
+  .flex-center-vertical;
+  .flex-center-horizontal;
 }
 
 .flex-spacer {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 // 响应式，加上 html 前缀覆盖作用
 html {
+  .normal-inline-show {
+    display: inline-block;
+  }
+  .small-block-show,
+  .small-inline-show {
+    display: none;
+  }
+  .normal-block-show {
+    display: block;
+  }
+  @media (max-width: 720px) {
+    .normal-block-show,
     .normal-inline-show {
-        display: inline-block;
+      display: none;
     }
-    .small-block-show,
     .small-inline-show {
-        display: none;
+      display: inline-block;
     }
-    .normal-block-show {
-        display: block;
+    .small-block-show {
+      display: block;
     }
-    @media (max-width: 720px) {
-        .normal-block-show,
-        .normal-inline-show {
-            display: none;
-        }
-        .small-inline-show {
-            display: inline-block;
-        }
-        .small-block-show {
-            display: block;
-        }
-    }
+  }
 }

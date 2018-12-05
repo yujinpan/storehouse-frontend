@@ -1,4 +1,4 @@
-export class menu {
-    name: String;
-    url: String;
+export interface Menu {
+  name: String;
+  url: String;
 }

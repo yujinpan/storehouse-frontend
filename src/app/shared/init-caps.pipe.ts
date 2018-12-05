@@ -4,9 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'initCaps'
 })
 export class InitCapsPipe implements PipeTransform {
-
   transform(value: string): string {
     return value;
   }
-
 }

@@ -17,8 +17,7 @@ export class NavComponent implements OnInit {
     this.menus = menuService.getMenus();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   toggleMenu() {
     this.logoActive = !this.logoActive;

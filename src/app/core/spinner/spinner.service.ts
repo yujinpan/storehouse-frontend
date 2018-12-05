@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Subject } from "rxjs";
+import { Subject } from 'rxjs';
 
 export interface SpinnerState {
-  show: boolean
+  show: boolean;
 }
 
 @Injectable()
@@ -11,7 +11,7 @@ export class SpinnerService {
 
   spinnerState = this.spinnerSubject.asObservable();
 
-  constructor() { }
+  constructor() {}
 
   show() {
     this.spinnerSubject.next(<SpinnerState>{ show: true });
