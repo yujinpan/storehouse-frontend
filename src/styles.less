@@ -29,8 +29,6 @@ ul {
 
 // app-root
 app-root {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   top: 56px;
   left: 0;
@@ -41,6 +39,15 @@ app-root {
 // 常用 flex 布局
 .flex() {
   display: flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .flex-center-vertical {

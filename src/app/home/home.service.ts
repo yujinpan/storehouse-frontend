@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class AppService {
+export class HomeService {
   private API = {
     pv: '/pv/set'
   };

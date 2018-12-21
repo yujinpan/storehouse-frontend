@@ -1,5 +1,5 @@
-<app-nav (menuStateChange)="sidenav.toggle()"></app-nav>
-<mat-sidenav-container hasBackdrop="false">
+<app-nav class="app-nav" (menuStateChange)="sidenav.toggle()"></app-nav>
+<mat-sidenav-container class="container flex-1" hasBackdrop="false">
   <mat-sidenav #sidenav mode="push">
     <app-slide-nav></app-slide-nav>
   </mat-sidenav>
