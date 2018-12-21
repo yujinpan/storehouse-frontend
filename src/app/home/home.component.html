@@ -4,7 +4,7 @@
     <app-slide-nav></app-slide-nav>
   </mat-sidenav>
   <mat-sidenav-content class="app-main flex-center">
-    <h1>Hello World!</h1>
     <span *ngIf="pv > 0" class="stat-pv">PV: {{ pv }}</span>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

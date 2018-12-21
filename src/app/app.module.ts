@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
+import { HelloWorldComponent } from './hello-world/hello-world.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, HelloWorldComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
