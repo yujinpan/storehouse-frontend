@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { InitCapsPipe } from './init-caps.pipe';
-import { TextFilterComponent } from './text-filter.component';
-import { TextFilterService } from './text-filter.service';
-
 import {
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
   MatListModule
 } from '@angular/material';
+
+import { NavService } from './nav.service';
+import { LoggerService } from './logger.service';
+import { StatService } from './stat.service';
 
 const MatModules = [
   MatButtonModule,
@@ -22,14 +22,8 @@ const MatModules = [
 
 @NgModule({
   imports: [CommonModule, FormsModule, ...MatModules],
-  declarations: [InitCapsPipe, TextFilterComponent],
-  providers: [TextFilterService],
-  exports: [
-    CommonModule,
-    FormsModule,
-    TextFilterComponent,
-    InitCapsPipe,
-    ...MatModules
-  ]
+  declarations: [],
+  providers: [NavService, LoggerService, StatService],
+  exports: [CommonModule, FormsModule, ...MatModules]
 })
 export class SharedModule {}

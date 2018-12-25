@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HelloWorldComponent } from './hello-world/hello-world.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HelloWorldComponent
+    redirectTo: 'helloworld',
+    pathMatch: 'full'
+  },
+  {
+    path: 'helloworld',
+    loadChildren: './hello-world/hello-world.module#HelloWorldModule'
   }
 ];
 

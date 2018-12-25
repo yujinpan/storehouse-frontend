@@ -1,10 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+export interface Pv {
+  state: boolean;
+  total: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class StatService {
   private API = {
     pv: '/pv/set'
   };
