@@ -6,8 +6,10 @@ export interface Nav {
 }
 
 export const navs: Nav[] = [
-  { name: '工具', url: '.' },
-  { name: '文集', url: '.' }
+  { name: '工具', url: '' },
+  { name: '文集', url: '' },
+  { name: 'Hello World', url: '/helloworld' },
+  { name: 'Login', url: '/login' }
 ];
 
 @Injectable({

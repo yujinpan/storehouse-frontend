@@ -1,13 +1,21 @@
 <nav class="navbar-header flex-center-vertical mat-elevation-z6">
   <!-- reactive -->
   <!-- pc -->
-  <a class="navbar-logo normal-inline-show" mat-mini-fab routerLink=".">
-    <app-logo></app-logo>
+  <a class="navbar-logo normal-inline-show" mat-mini-fab routerLink="/">
+    <ng-container *ngTemplateOutlet="logo"></ng-container>
   </a>
   <!-- wap -->
   <button (click)="toggleMenu()" class="small-inline-show" mat-mini-fab>
-    <app-logo [logoActive]="logoActive"></app-logo>
+    <ng-container *ngTemplateOutlet="logo"></ng-container>
   </button>
+  <!-- logo template -->
+  <ng-template #logo>
+    <div class="logo-wrapper" [ngClass]="{ active: logoActive }">
+      <div class="logo-style1"></div>
+      <div class="logo-style2"></div>
+      <div class="logo-style3"></div>
+    </div>
+  </ng-template>
   <!-- end reactive -->
   <!-- menus -->
   <span class="normal-inline-show">

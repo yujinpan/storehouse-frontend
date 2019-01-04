@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { NavService, Nav } from 'src/app/shared/nav.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { NavService, Nav } from 'src/app/core/nav.service';
 
 @Component({
   selector: 'app-nav',

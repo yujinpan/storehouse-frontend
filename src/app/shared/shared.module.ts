@@ -9,11 +9,9 @@ import {
   MatListModule
 } from '@angular/material';
 
-import { NavService } from './nav.service';
-import { LoggerService } from './logger.service';
-import { StatService } from './stat.service';
-
-const MatModules = [
+const sharedModules = [
+  CommonModule,
+  FormsModule,
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
@@ -21,9 +19,9 @@ const MatModules = [
 ];
 
 @NgModule({
-  imports: [CommonModule, FormsModule, ...MatModules],
+  imports: [...sharedModules],
   declarations: [],
-  providers: [NavService, LoggerService, StatService],
-  exports: [CommonModule, FormsModule, ...MatModules]
+  providers: [],
+  exports: [...sharedModules]
 })
 export class SharedModule {}
