@@ -10,7 +10,7 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       {
-        path: 'helloworld',
+        path: '',
         loadChildren: './hello-world/hello-world.module#HelloWorldModule'
       }
     ]

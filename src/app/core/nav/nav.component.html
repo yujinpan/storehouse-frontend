@@ -18,8 +18,9 @@
   </ng-template>
   <!-- end reactive -->
   <!-- menus -->
-  <span class="normal-inline-show">
-    <a *ngFor="let menu of menus" mat-button [routerLink]="menu.url">
+  <span class="normal-inline-show navbar-list">
+    <a *ngFor="let menu of menus" mat-button [href]="menu.url" target="_blank">
+      <mat-icon>{{ menu.icon }}</mat-icon>
       <span>{{ menu.name }}</span>
     </a>
   </span>

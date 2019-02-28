@@ -1,12 +1,14 @@
 <app-nav class="app-nav" (menuStateChange)="sidenav.toggle()"></app-nav>
-<mat-sidenav-container class="container flex-1" hasBackdrop="false">
+<mat-sidenav-container class="container flex-1">
   <mat-sidenav #sidenav mode="push">
     <a
       *ngFor="let menu of menus"
       class="slide-nav-button"
       mat-button
-      [routerLink]="menu.url"
+      [href]="menu.url"
+      target="_blank"
     >
+      <mat-icon>{{ menu.icon }}</mat-icon>
       <span>{{ menu.name }}</span>
     </a>
   </mat-sidenav>
